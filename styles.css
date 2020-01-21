@@ -1,0 +1,205 @@
+body {
+  overflow: hidden;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+#tooltip {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: white;
+  border-radius: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#popTooltip {
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  background: white;
+  border-radius: 7px;
+  visibility: hidden;
+  pointer-events: none;
+  border: 2px solid navy;
+  text-align: center;
+  visibility: hidden;
+  z-index: 3;
+}
+
+#popTooltip p {
+  font-weight: bold;
+  color: navy;
+  margin-top: 8px;
+}
+
+#tooltipCountry {
+  text-align: center;
+  margin: auto;
+  margin-top: 40%;
+  font-size: 14px;
+  max-width: 80px;
+}
+
+#tooltipSvg {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+}
+
+#tooltip:before {
+  content: "";
+  position: absolute;
+  top: 100%; 
+  margin-top: -15px;                
+  left:calc(50% - 30px);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 25px solid white;
+  z-index: 0;
+}
+
+#detailBox {
+  position: absolute;
+  width: 450px;
+  height: 565px;
+  background: white;
+  border-radius: 7px;
+  top: 25px;
+  left: -450px;
+  text-align: center;
+  z-index: 2;
+}
+
+#storyBox {
+  position: absolute;
+  width: 450px;
+  height: 565px;
+  background: white;
+  border-radius: 7px;
+  top: 125px;
+  left: -450px;
+  text-align: center;
+  z-index: 0;
+}
+
+#storyWrapper {
+  text-align: left;
+  padding: 0 30px;
+  overflow-y: scroll;
+  height: 490px;
+}
+
+#barWrapper {
+  overflow-x: show;
+  overflow-y: scroll;
+  height: 475px;
+}
+
+#scaleWrapper {
+  height: 20px;
+}
+
+#detailSvg, #scaleSvg {
+  margin: auto;
+}
+
+#scaleSvg {
+  height: 100%;
+}
+
+#slideButton {
+  position: absolute;
+  width: 60px;
+  border-radius: 7px;
+  background:white;
+  height: 50px;
+  right: -50px;
+
+  cursor: pointer;
+}
+
+#slideButtonStory {
+  position: absolute;
+  width: 60px;
+  border-radius: 7px;
+  background:white;
+  height: 50px;
+  right: -50px;
+
+  cursor: pointer;
+
+  font-size: 44px;
+  color: navy;
+
+  padding-right:-10px;
+}
+
+#slideButtonStory p{
+  margin: 0;
+   padding-left: 10px;
+}
+
+#slideButton img {
+  margin-left: 15px;
+  margin-top: 5px;
+  height: 45px;
+  width: 45px;
+}
+
+.tick text {
+  display: inline-block;
+  width: 60px;
+}
+
+.axis-left1 .tick line {
+  display: none;
+}
+
+.axis-left1 .domain{
+  display: none;
+}
+
+#languageSelect {
+  position: absolute;
+  width: 240px;
+  right: 10px;
+  top: 5px;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+}
+
+#searchButton, #clearButton {
+  text-align: center;
+  position: absolute;
+  width: 120px;
+  top: 42px;
+  padding: 3px 0;
+  font-size: 15px;
+  background: white;
+  cursor: pointer;
+}
+
+#searchButton {
+  right: 10px;
+}
+
+#clearButton {
+  right: 140px;
+}
+
+#searchButton:hover, #clearButton:hover {
+  background: gold;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

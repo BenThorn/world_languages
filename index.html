@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Languages around the World</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    <script src="https://d3js.org/d3-array.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+  </head>
+  <body>
+    <input id="languageSelect" list="languages" placeholder="Select a language" name="browser">
+    <datalist id="languages">
+        <option value="Internet Explorer">
+    </datalist>
+    <div id="searchButton">View</div>
+    <div id="clearButton">Clear</div>
+    <div id="detailBox">
+      <div id="slideButton">
+        <img src="Assets/barchart.png" />
+      </div>
+      <h2 id="detailCountry"><i>No Country Chosen</i></h2>
+      <div id="scaleWrapper">
+        <svg id="scaleSvg"></svg>
+      </div>
+      <div scroll="no" id="barWrapper">
+          <svg id="detailSvg"></svg>
+      </div>
+    </div>
+    <div id="storyBox">
+      <div id="slideButtonStory">
+        <p>?</p>
+      </div>
+      <h2 id="title">Language around the World</h2>
+      <div id="storyWrapper">
+        <p>There's a lot of languages in the world, a vast majority of which most people have most likely never even heard of.</p> 
+        <p>There are some langauages spoken by less than a thousand of people, and many that are entirely unique to their part of the world. And then of course there are languages such as English that have spread so far it would be hard to not find a speaker in many parts of the world.</p>
+        <p>You can use this visualization to explore the world and its languages, and see how the speakers of each language are distributed across the planet.</p>
+        <h3>How to use</h3>
+        <p>You can hover over any country to see a preview of its language population proportions, and click on it to see a more detailed view. You can search any language in the top right corner, and then view a distribution of speakers of that language on the map. Hit clear to go back to normal.</p>
+        <h3>Sources</h3>
+        <p>Note: Data was obtained from the UN's list of language tabulations, and as such does not include every country. Extra population data for many absent European countries were estimated by hand via percentages from the BBC's website. Estimated countries will be marked by an asterisk*.</p>
+        <p><a href="http://data.un.org/Data.aspx?d=POP&f=tableCode:27">UN Language Population Data</a></p>
+        <p><a href="http://www.bbc.co.uk/languages/european_languages/">BBC's European Languages</a></p>
+      </div>
+    </div>
+    <div id="tooltip">
+      <p id="tooltipCountry"></p>
+      <svg id="tooltipSvg"></svg>
+    </div>
+    <div id="popTooltip">
+      <p></p>
+    </div>
+    <svg id="svg">
+      <defs>
+        <pattern id="pattern_RvSrG" patternUnits="userSpaceOnUse" width="9" height="9" patternTransform="rotate(33)">
+          <line id="patternLine" x1="0" y="0" x2="0" y2="9" stroke="darkgreen" stroke-width="16" />
+        </pattern>
+      </defs>
+    </svg>
+    <script src="main.js"></script>
+  </body>
+</html>
